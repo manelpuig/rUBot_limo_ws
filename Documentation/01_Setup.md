@@ -49,3 +49,15 @@ roslaunch limo_gazebo limo_four_diff.launch
 ````shell
 roslaunch limo_gazebo limo_ackerman.launch 
 ````
+To view the robot in RVIZ:
+````shell
+roslaunch limo_viz view_four_diff_model.launch
+````
+To control using keyboard:
+````shell
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+````
+or The terminal:
+````shell
+rostopic pub -r 1 /cmd_vel geometry_msgs/Twist '[1, 0, 0]' '[0, 0, 1]'
+````
