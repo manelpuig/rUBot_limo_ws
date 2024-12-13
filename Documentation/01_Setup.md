@@ -7,7 +7,7 @@ References:
 - https://github.com/limo-agx/limo
 - https://github.com/limo-agx/limo_desktop
 - https://github.com/limo-agx/limo_simulator
-- https://limo-agx.github.io/developer_machine_setup.html
+- https://limo-agx.github.io
 - https://bitbucket.org/theconstructcore/limo_robot/src/main/
 
 
