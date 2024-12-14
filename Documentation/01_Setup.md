@@ -10,6 +10,11 @@ References:
 - https://limo-agx.github.io
 - https://bitbucket.org/theconstructcore/limo_robot/src/main/
 
+- https://github.com/agilexrobotics/limo_ros/tree/master
+- https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md
+- chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://static.generation-robots.com/media/limo-standard-user-manual-en.pdf
+- https://docs.trossenrobotics.com/agilex_limo_docs/demos/slam_nav/rtabmap.html
+
 
 
 ## **Instructions**
