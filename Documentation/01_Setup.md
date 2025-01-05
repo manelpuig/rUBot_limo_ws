@@ -17,20 +17,7 @@ References:
 
 ## **Instructions**
 
-- Create a local "project rUBot_limo_ws" with VS code
-- Create a "src" folder
-- Clone inside the repositories:
-````shell
-cd src
-git clone https://github.com/agilexrobotics/limo_ros.git
-git clone https://github.com/limo-agx/limo.git
-git clone https://github.com/limo-agx/limo_desktop.git
-git clone https://github.com/limo-agx/limo_simulator.git
-````
-- delete the .git folders in the cloned packages
-- Create and sync a new repository in github within VS code in "source control" option
-
-Once the github repository is created you can open the ROS environment (i.e. TheConstruct environment)
+We have created a ·rUBot_limo_ws" github repository to fork on your github account and clone to your ROS environment (i.e. TheConstruct environment)
 - clone the "rUBot_limo_ws" repository on Home ROS environment:
 ````shell
 git clone https://github.com/manelpuig/rUBot_limo_ws.git
@@ -38,10 +25,16 @@ git clone https://github.com/manelpuig/rUBot_limo_ws.git
 - install dependencies and build
 ````shell
 cd ..
-rosdep install --from-paths src --ignore-src -y
 catkin_make
 source devel/setup.bash
 ````
+- Add in .bashrc the lines:
+````shell
+source /opt/ros/noetic/setup.bash
+source /home/user/rUBot_limo_ws/devel/setup.bash
+cd /home/user/rUBot_limo_ws
+````
+
 ## **Bringup and control**
 
 To bringup the Limo robot in simulation environment:

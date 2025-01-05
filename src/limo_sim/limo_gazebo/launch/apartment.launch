@@ -1,7 +1,7 @@
 <launch>
-    <param name="apartment_urdf" command="$(find xacro)/xacro --inorder '$(find limo_gazebo)/urdf/apartment.urdf.xacro'" />
-    <param name="apartment_decorations_urdf" command="$(find xacro)/xacro --inorder '$(find limo_gazebo)/urdf/decorations.urdf.xacro'" />
-    <param name="apartment_floor_urdf" command="$(find xacro)/xacro --inorder '$(find limo_gazebo)/urdf/floor.urdf.xacro'" />
+    <param name="apartment_urdf" command="$(find xacro)/xacro '$(find limo_gazebo)/urdf/apartment.urdf.xacro'" />
+    <param name="apartment_decorations_urdf" command="$(find xacro)/xacro '$(find limo_gazebo)/urdf/decorations.urdf.xacro'" />
+    <param name="apartment_floor_urdf" command="$(find xacro)/xacro '$(find limo_gazebo)/urdf/floor.urdf.xacro'" />
 
     <arg name="use_sim_time" default="true" />
     <arg name="gui" default="true" />
