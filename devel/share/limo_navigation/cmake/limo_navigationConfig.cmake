@@ -67,7 +67,7 @@ set(limo_navigation_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(limo_navigation_SOURCE_PREFIX /home/user/rUBot_limo_ws/src/limo/limo_navigation)
+  set(limo_navigation_SOURCE_PREFIX /home/user/rUBot_limo_ws/src/limo_sim/limo_navigation)
   set(limo_navigation_DEVEL_PREFIX /home/user/rUBot_limo_ws/devel)
   set(limo_navigation_INSTALL_PREFIX "")
   set(limo_navigation_PREFIX ${limo_navigation_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'limo_navigation' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'limo_navigation' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/user/rUBot_limo_ws/src/limo/limo_navigation/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'limo_navigation' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/user/rUBot_limo_ws/src/limo_sim/limo_navigation/${idir}'.  ${_report}")
     endif()
     _list_append_unique(limo_navigation_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/user/rUBot_limo_ws/devel/lib;/home/user/rUBot_tutorial_ws/devel/lib;/home/user/rUBot_mecanum_ws/devel/lib;/home/user/catkin_ws/devel/lib;/home/user/simulation_ws/devel/lib;/home/simulations/public_sim_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/user/rUBot_limo_ws/devel/lib;/home/user/catkin_ws/devel/lib;/home/user/simulation_ws/devel/lib;/home/simulations/public_sim_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

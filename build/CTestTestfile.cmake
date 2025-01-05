@@ -5,10 +5,11 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("limo/limo_description")
-subdirs("limo_desktop/limo_desktop")
-subdirs("limo_simulator/limo_simulator")
-subdirs("limo/limo_control")
-subdirs("limo/limo_navigation")
-subdirs("limo_desktop/limo_viz")
-subdirs("limo_simulator/limo_gazebo")
+subdirs("limo_ros/limo_bringup")
+subdirs("limo_ros/limo_description")
+subdirs("limo_sim/rubot_limo_description")
+subdirs("limo_sim/limo_control")
+subdirs("limo_sim/limo_navigation")
+subdirs("limo_sim/limo_viz")
+subdirs("limo_sim/limo_gazebo")
+subdirs("limo_ros/limo_base")

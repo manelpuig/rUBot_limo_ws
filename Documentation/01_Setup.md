@@ -3,19 +3,17 @@
 This repository is used for LIMO robot simulation in ROS Noetic
 
 References:
-- https://github.com/limo-agx
-- https://github.com/limo-agx/limo
-- https://github.com/limo-agx/limo_desktop
-- https://github.com/limo-agx/limo_simulator
-- https://limo-agx.github.io
-- https://bitbucket.org/theconstructcore/limo_robot/src/main/
 
-- https://github.com/agilexrobotics/limo_ros/tree/master
-- https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md
-- https://static.generation-robots.com/media/limo-standard-user-manual-en.pdf
-- https://docs.trossenrobotics.com/agilex_limo_docs/demos/slam_nav/rtabmap.html
-
-
+- Manual (pdf): https://static.generation-robots.com/media/limo-standard-user-manual-en.pdf
+- Manual (Web): https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md
+- github: https://github.com/agilexrobotics/limo_ros/tree/master
+- RTABMAP: https://docs.trossenrobotics.com/agilex_limo_docs/demos/slam_nav/rtabmap.html
+- Doc_tutorial: https://limo-agx.github.io
+- Github: https://github.com/limo-agx
+- Github: https://github.com/limo-agx/limo
+- Github: https://github.com/limo-agx/limo_desktop
+- Github: https://github.com/limo-agx/limo_simulator
+- bitbucket: https://bitbucket.org/theconstructcore/limo_robot/src/main/
 
 ## **Instructions**
 
@@ -24,6 +22,7 @@ References:
 - Clone inside the repositories:
 ````shell
 cd src
+git clone https://github.com/agilexrobotics/limo_ros.git
 git clone https://github.com/limo-agx/limo.git
 git clone https://github.com/limo-agx/limo_desktop.git
 git clone https://github.com/limo-agx/limo_simulator.git
@@ -49,6 +48,10 @@ To bringup the Limo robot in simulation environment:
 - The Differential Drive model
 ````shell
 roslaunch limo_gazebo limo_four_diff.launch 
+````
+- The Mecanum Drive model
+````shell
+roslaunch limo_gazebo limo_mecanum.launch 
 ````
 - The Ackerman Drive model:
 ````shell
