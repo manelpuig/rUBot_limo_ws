@@ -1,2 +1,0 @@
-limo_ros/limo_base:limo_ros/limo_bringup:limo_ros/limo_description:limo_sim/limo_control:limo_sim/limo_gazebo:limo_sim/limo_navigation:limo_sim/limo_viz:limo_sim/rubot_limo_description
--DCATKIN_DEVEL_PREFIX=/home/user/rUBot_limo_ws/devel -DCMAKE_INSTALL_PREFIX=/home/user/rUBot_limo_ws/install -G Unix Makefiles

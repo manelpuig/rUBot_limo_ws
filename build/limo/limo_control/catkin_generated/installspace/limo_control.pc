@@ -1,8 +1,0 @@
-prefix=/home/user/rUBot_limo_ws/install
-
-Name: limo_control
-Description: Description of limo_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
