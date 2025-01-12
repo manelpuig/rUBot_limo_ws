@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <launch>
-    <include file="$(find limo_gazebo)/launch/apartment.launch"/>
+    <arg name="world" default="square2.world"/> 
+    <arg name="model" default="rubot_custom.urdf" />
+    <!-- <include file="$(find limo_gazebo)/launch/apartment.launch"/>-->
     
     <param name="robot_description" command="$(find xacro)/xacro '$(find rubot_limo_description)/urdf/limo_mecanum.xacro'"/>
     <arg name="x" default="0.0"/>
@@ -8,6 +10,11 @@
     <arg name="z" default="0.3"/>
     <arg name="yaw" default="0.0"/>
     
+    <!-- spawn world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find limo_gazebo)/worlds/$(arg world)"/>
+    </include>
+
     <node name="spawn_limo_model" pkg="gazebo_ros" type="spawn_model" args="-x $(arg x)
         -y $(arg y)
         -z $(arg z)
@@ -19,11 +26,11 @@
 
     <rosparam file="$(find limo_gazebo)/config/limo_mecanum_control.yaml" command="load"/>
 
-    <node name="controller_spawner" pkg="controller_manager" type="spawner"
+    <!--<node name="controller_spawner" pkg="controller_manager" type="spawner"
           respawn="false" output="screen" args="limo_state_controller"/>
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node name="dummy_zero_cmd_vel" pkg="limo_gazebo" type="dummy_cmd_vel" />
 
-    <include file="$(find limo_control)/launch/control.launch"/>
+    <include file="$(find limo_control)/launch/control.launch"/>-->
 </launch>
