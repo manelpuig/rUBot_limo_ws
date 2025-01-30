@@ -1,4 +1,4 @@
-# **1. Setup**
+# **1. LIMO HW&SW repository Setup**
 
 This repository is used for LIMO robot simulation in ROS Noetic
 
@@ -16,9 +16,25 @@ References:
 - Github: https://github.com/limo-agx/limo_simulator
 - bitbucket: https://bitbucket.org/theconstructcore/limo_robot/src/main/
 
-## **Instructions**
+## **Repository Setup Instructions**
 
-We have created a ·rUBot_limo_ws" github repository to fork on your github account and clone to your ROS environment (i.e. TheConstruct environment)
+We have created a "rUBot_limo_ws" github repository to fork on your github account and clone to your ROS environment (i.e. TheConstruct environment)
+
+To create this repository we have followed the Agilex instructions:
+````shell
+mkdir -p ~/rUBot_limo_ws/src
+cd ~/rUBot_limo_ws/src
+# download source code
+git clone https://github.com/limo-agx/limo.git
+git clone https://github.com/limo-agx/limo_desktop.git
+git clone https://github.com/limo-agx/limo_simulator.git
+git clone https://github.com/limo-agx/limo_vision.git
+git clone https://github.com/limo-agx/limo_robot.git
+cd ~/rUBot_limo_ws
+catkin_make
+````
+This is already done and ready to work:
+
 - clone the "rUBot_limo_ws" repository on Home ROS environment:
 ````shell
 git clone https://github.com/manelpuig/rUBot_limo_ws.git
@@ -36,7 +52,7 @@ source /home/user/rUBot_limo_ws/devel/setup.bash
 cd /home/user/rUBot_limo_ws
 ````
 
-## **Bringup and control**
+## **Bringup and control in Virtual environment**
 
 To bringup the Limo robot in simulation environment:
 - The Differential Drive model
