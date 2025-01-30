@@ -4,6 +4,7 @@ This repository is used for LIMO robot simulation in ROS Noetic
 
 References:
 
+- Web Manual: https://docs.trossenrobotics.com/agilex_limo_docs/
 - Manual (pdf): https://static.generation-robots.com/media/limo-standard-user-manual-en.pdf
 - Manual (Web): https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md
 - github: https://github.com/agilexrobotics/limo_ros/tree/master
@@ -61,4 +62,32 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 or The terminal:
 ````shell
 rostopic pub -r 1 /cmd_vel geometry_msgs/Twist '[1, 0, 0]' '[0, 0, 1]'
+````
+
+## **Bringup and control of real Limo robot**
+
+To bringup HW:
+
+### **1. Bringup only base**
+
+````shell
+cd /home/agilex/agilex_ws
+roslaunch limo_base limo_base.launch
+roslaunch limo_bringup limo_teletop_keyboard.launch
+````
+
+Control on python:
+````shell
+cd /home/agilex/agilex_ws/src/limo_ros/limo_base/script
+python3 limomove.py
+````
+We have to install pylimo
+
+
+### **2. Bringup with LiDAR**
+
+````shell
+cd /home/agilex/agilex_ws
+roslaunch limo_bringup limo_start.launch pub_odom_tf:=false
+roslaunch limo_bringup lidar_rviz.launch
 ````
