@@ -16,7 +16,7 @@ References:
 - Github: https://github.com/limo-agx/limo_simulator
 - bitbucket: https://bitbucket.org/theconstructcore/limo_robot/src/main/
 
-## **Repository Setup Instructions**
+## **1.1. Repository for simulation**
 
 We have created a "rUBot_limo_ws" github repository to fork on your github account and clone to your ROS environment (i.e. TheConstruct environment)
 
@@ -51,59 +51,21 @@ source /opt/ros/noetic/setup.bash
 source /home/user/rUBot_limo_ws/devel/setup.bash
 cd /home/user/rUBot_limo_ws
 ````
+## **1.2. Repository for real robots**
 
-## **Bringup and control in Virtual environment**
+Documentation:
+- https://github.com/agilexrobotics/limo_ros
+- https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md
+- https://github.com/agilexrobotics/limo_ros2/tree/humble
+- https://github.com/agilexrobotics/limo_pro_doc/blob/master/Limo%20Pro%20Ros2%20Foxy%20user%20manual(EN).md
 
-To bringup the Limo robot in simulation environment:
-- The Differential Drive model
-````shell
-roslaunch limo_gazebo limo_four_diff.launch 
-````
-- The Mecanum Drive model
-````shell
-roslaunch limo_gazebo limo_mecanum.launch 
-````
-- The Ackerman Drive model:
-````shell
-roslaunch limo_gazebo limo_ackerman.launch 
-````
-To view the robot in RVIZ:
-````shell
-roslaunch limo_viz view_four_diff_model.launch
-````
-To control using keyboard:
-````shell
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-````
-or The terminal:
-````shell
-rostopic pub -r 1 /cmd_vel geometry_msgs/Twist '[1, 0, 0]' '[0, 0, 1]'
-````
-
-## **Bringup and control of real Limo robot**
-
-To bringup HW:
-
-### **1. Bringup only base**
-
+We can take the created repositories in limo robot (for ROs Noetic and RO2 Foxy):
+- ROS Noetic:
 ````shell
 cd /home/agilex/agilex_ws
-roslaunch limo_base limo_base.launch
-roslaunch limo_bringup limo_teletop_keyboard.launch
 ````
-
-Control on python:
-````shell
-cd /home/agilex/agilex_ws/src/limo_ros/limo_base/script
-python3 limomove.py
-````
-We have to install pylimo
-
-
-### **2. Bringup with LiDAR**
-
+- ROS2 Foxy
 ````shell
 cd /home/agilex/agilex_ws
-roslaunch limo_bringup limo_start.launch pub_odom_tf:=false
-roslaunch limo_bringup lidar_rviz.launch
 ````
+
