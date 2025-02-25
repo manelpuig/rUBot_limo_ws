@@ -68,7 +68,7 @@ cd /home/agilex/agilex_ws
 ````
 - ROS2 Foxy
 ````shell
-cd /home/agilex/agilex_ws
+cd /home/agilex/limo_ros2_ws
 ````
 You can simply source the .bashrc and work inside the repository.
 
@@ -78,3 +78,4 @@ The available repositories in real LIMO robot Jetson Nano computer onboard are o
 - The process is describerd for ROS1 Noetic in: https://bitbucket.org/theconstructcore/agilex_limo/src/master/
 - The process is describerd for ROS2 Humble in: https://hub.docker.com/r/theconstructai/limo
 
+Careful!: add user to docker group: (https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
